@@ -1,0 +1,130 @@
+// Thanks Style
+
+.thanks{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    @include media(sm){
+        padding-top: 0;
+    }
+    &__text{
+        max-width: 500px;
+    }
+    &__row{
+        margin-bottom: 63px;
+        @include media(sm){
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+    &__desc{
+        @include media(sm){
+            max-width: 80%;
+        }
+    }
+    &__text{
+        @include media(sm){
+            margin-bottom: 12px;
+        }
+    }
+}
+
+// Experts Style
+
+.experts{ 
+    position: relative;
+    margin-bottom: 20px;
+    &::after{
+        content: "";
+        position: absolute;
+        top: -42px;
+        right: -52px;
+        background-image: url(../../image/logo-large.svg);
+        background-repeat: no-repeat;
+        width: 95px;
+        height: 95px;
+        @include media(md){
+            display: none;
+        }
+    }
+    &__box{
+        padding: 28px 30px 28px 24px;
+        transition: all .3s ease-in-out;
+        @include media(sm){
+            padding: 15px 10px;
+        }
+    }
+    &__item{
+        border-radius: 5px 5px 0px 0px;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        cursor: pointer;
+        &:hover{
+            .experts__box{
+                box-shadow:0px 10px 52px rgba(0,0,0,0.08)
+            }
+            .experts__author{
+                *{
+                    color: $accent;
+                }
+            }
+            .experts__img{
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__img{
+        padding-top: 57%;
+        border-radius: 5px 5px 0px 0px;
+        @include bgi;
+        position: relative;
+        &::before{
+            content: "\F231";
+            font-family: "bootstrap-icons";
+            width: 50px;
+            font-size: 25px;
+            height: 50px;
+            transition: all .3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            bottom: 10%;
+            right: 5%;
+            color: $accent;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+        }
+    }
+    &__desc{
+        margin-bottom: 16px;
+        .desc{
+            @include media(sm){
+                font-size: 15px;
+            }
+        }
+    }
+    &__author{
+        *{
+            color: $color;
+            font-size: 16px;
+            transition: all .3s ease-in-out;
+        }
+    }
+    
+}
+
+.slick{
+    &-list{
+        margin-left: -30px;
+    }
+    &-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+

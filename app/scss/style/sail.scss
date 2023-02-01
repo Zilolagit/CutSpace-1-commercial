@@ -1,0 +1,115 @@
+.sail{
+    background-color: red;
+    @include media(lg){
+        background: $color;
+        padding-bottom: 50px;
+    }
+    @include media(md){
+        background: $color;
+    }
+    &__container{
+        position: relative;
+    }
+    &__box{
+        background: $color;
+        border-radius: 20px;
+        padding-top: 65px;
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        margin-bottom: -240px;
+        @include media(lg){
+            background: transparent;
+            margin-bottom: 0%;
+            position: relative;
+            &::after{
+                display: none;
+            }
+        }
+        @include media(md){
+            padding-top: 40px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-image: url(../../image/shape-2.svg);
+            height: 177px;
+            width: 201px;
+            top: 0%;
+            right: 0;
+            background-size: 200px;
+            background-position: right bottom;
+        }
+    }
+    &__img{
+        background-color: #fff;
+        padding: 20px 25px 0 0;
+        box-shadow: 4px 20px 42px -2px rgba(0, 0, 0, 0.12);
+        border-radius: 0px 21.6px 0px 0px;
+        position: relative;
+        z-index: 4;
+        &::before{
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-image: url(../../image/shape-1.png);
+            height: 100px;
+            width: 185px;
+            right: -20%;
+            bottom: 0;
+            background-size: 270px;
+            background-position: right bottom;
+        }
+        @include media(lg){
+            padding: 0;
+            &::before{
+                display: none;
+            }
+            border-radius: 10px;
+        }
+    }
+    &__card{
+        padding-top: 74%;
+        @include bgi;
+        border-bottom-left-radius: 20px;
+        @include media(lg){
+            border-radius: 10px;
+            padding-top: 60%;
+        }
+    }
+    &__part{
+        padding-top: 28px;
+        @include media(sm){
+            text-align: center;
+            padding: 0 10px;
+            padding-top: 28px;
+        }
+    }
+    &__text{
+        margin-bottom: 13px;
+    }
+    &__desc{
+        margin-bottom: 32px;
+        @include media(md){
+            max-width: 365px;
+        }
+        @include media(md){
+            max-width: 100%;
+        }
+    }
+    &__btn{
+        button{
+            &:nth-child(2){
+                margin-left: 12px;
+                @include media(sm){
+                    margin-left: 0;
+                }
+            }
+            @include media(sm){
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

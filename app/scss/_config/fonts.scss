@@ -1,0 +1,14 @@
+@import "_mixins/font-face";
+
+@include font-face("poppins-regular","../font/Poppins-Regular",400);
+@include font-face("poppins-bold","../font/Poppins-Bold",700);
+
+// Font regular
+@mixin regular{
+    font-family: "poppins-regular", sans-serif;
+}
+
+// Font Bold
+@mixin bold{
+    font-family: "poppins-bold", sans-serif;
+}

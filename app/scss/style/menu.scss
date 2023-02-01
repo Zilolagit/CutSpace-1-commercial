@@ -1,0 +1,21 @@
+.menu{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: $text;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.2;
+        @include media(lg){
+            font-size: 15px;
+        }
+    }
+    &-active{
+        @include bold;
+        color: $accent !important;
+    }
+}

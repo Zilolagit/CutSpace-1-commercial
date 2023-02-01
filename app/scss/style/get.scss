@@ -1,0 +1,81 @@
+// Get Stle
+
+.get{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: $color;
+    z-index: 9;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 170px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: -60px;
+        transform: skewY(-1.5deg);
+        transform-origin: 100% 0;
+        z-index: 4;
+        @include media(md){
+            display: none;
+        }
+    }
+    @include media(md){
+        background: $color;
+        padding-top: 40px;
+    }
+    &__box{
+        padding-top: 220px;
+        @include media(md){
+            padding: 20px 60px;
+            text-align: center;
+        }
+        @include media(sm){
+            padding: 20px 0px;
+        }
+        @include media(lg){
+            padding-top: 155px;
+            margin-bottom: 30px;
+        }
+    }
+    &__img{
+        position: relative;
+        z-index: 5;
+        img{
+            margin-bottom: -7px;
+        }
+        @include media(md){
+            display: none;
+        }
+    }
+    &__title{
+        margin-bottom: 12px;
+    }
+    &__desc{
+        margin-bottom: 25px;
+    }
+    &__img{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -70%;
+            left: -12%;
+            width: 750px;
+            height: 750px;
+            z-index: -4;
+            transform: rotate(90deg);
+            border-radius: 50%;
+            background: linear-gradient(223.68deg, rgba(255, 255, 255, 0.0001) 29.68%, rgba(255, 255, 255, 0.502759) 99.43%);
+            @include media(md){
+                display: none;
+            }
+            @include media(lg){
+                width: 500px;
+                height: 535px;
+            }
+        }
+    }
+}
+

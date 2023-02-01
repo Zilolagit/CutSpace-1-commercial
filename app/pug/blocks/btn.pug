@@ -1,0 +1,11 @@
+mixin btn(clc,text)
+    if (clc)
+        button.btn(class="btn-" + clc)= text
+    else
+        button.btn= text
+
+mixin link(clc,href,text)
+    if (clc)
+        a.btn(href=href,class="btn-" + clc)= text
+    else 
+        a.btn(href=href)= text

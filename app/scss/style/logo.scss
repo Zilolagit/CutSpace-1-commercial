@@ -1,0 +1,24 @@
+.logo{
+    @include bold;
+    text-decoration: none;
+    color: $text;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    font-size: 24px;
+    @include media(lg){
+        font-size: 19px;
+    }
+    img{
+        margin-right: 10px;
+        @include media(lg){
+            height: 25px !important;
+        }
+    }
+    span{
+        margin-bottom: 12px;
+        @include media(lg){
+            margin-bottom: 8px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// Settings
+@import "_config/var";
+
+// Fonts
+@import "_config/fonts";
+
+
+body{
+    padding: 0;
+    margin: 0;
+    @include regular;
+    ::selection{
+        background-color: #58bebf;
+        color: #fff;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+img{
+    max-width: 100%;
+}
+
+// Libs
+@import "libs/*.scss";
+
+// Style
+@import "style/*.scss";
+
+

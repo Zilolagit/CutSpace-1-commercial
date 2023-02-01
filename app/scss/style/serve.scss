@@ -1,0 +1,66 @@
+.serve{
+    background-color: #f5f6fa;
+    padding-top: 375px;
+    @include media(lg){
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    @include media(md){
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    &__col{
+        width: 100%;
+        margin-bottom: -165px;
+        @include media(md){
+            margin-bottom: 0;
+        }
+    }
+    &__text{
+        text-align: center;
+        margin-bottom: 50px;
+        @include media(lg){
+            margin-bottom: 45px;
+        }
+    }
+    &__title{
+        margin-bottom: 8px;
+    }
+}
+
+.card{
+    padding: 30px 30px 45px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 40px 52px -22px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    *{
+        transition: all .3s ease-in-out;
+    }
+    &__desc{
+        max-width: 330px;
+        margin: 0 auto 33px;
+    }
+    @include media(md){
+        margin-bottom: 30px;
+    }
+    &-hover{
+        &:hover{
+            background-color: $accent;
+            *:not(button){
+                color: #fff;
+            }
+            svg{
+                path{
+                    fill:#fff;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+    &-active{
+        background-color: $accent;
+    }
+}

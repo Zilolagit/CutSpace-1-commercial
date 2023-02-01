@@ -1,0 +1,95 @@
+.choose{
+    padding-top: 280px;
+    text-align: center;
+    padding-bottom: 145px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    @include media(sm){
+        padding-bottom: 35px;
+    }
+    @include media(md){
+        padding-top: 40px;
+    }
+    @include media(lg){
+        padding-top: 120px;
+        padding-bottom: 25px;
+    }
+    &__text{
+        text-align: center;
+        @include media(lg){
+            margin-bottom: 30px;
+        }
+    }
+    &__card{
+        transition: all .3s ease-in-out;
+        &:hover{
+        .choose__img{
+            transition: all .3s ease-in-out;
+            background-color: $accent;
+            svg{
+                transition: all .3s ease-in-out;
+                *{
+                    fill: white;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+        @include media(md){
+            padding: 30px 0px;
+        }
+        @include media(lg){
+            padding: 35px 0px;
+        }
+    }
+    &__text{
+        margin-bottom: 60px;
+        h1{
+            @include media(md){
+                font-size: 39px;
+            }
+        }
+    }
+    &__title{
+        margin-bottom: 6px;
+        h1{
+            @include media(xl){
+                font-size: 21px;
+                letter-spacing: 0;
+            }
+        }
+    }
+    &__desc{
+        p{
+            @include media(xl){
+                font-size: 15px;
+            }
+            @include media(sm){
+                font-size: 13px;
+            }
+        }
+    }
+    &__img{
+        margin-bottom: 12px;
+        width: 70px;
+        height: 70px;
+        margin-left: calc(50% - 35px);
+        border-radius: 50%;
+        background-color:rgba(88, 190, 191, 0.2);
+        align-items: center;
+        justify-content: center;
+        display: flex;  
+        position: relative;
+        transition: all .3s ease-in-out;
+        svg{
+            transition: all .3s ease-in-out;
+        }
+        @include media(sm){
+            width: 55px;
+            height: 55px;
+            svg{
+                height: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// Header styles
+.header{
+    padding-bottom: 23.5px;
+    &__logo{
+        padding-top: 40px;
+        @include media(sm){
+            padding-top: 16px;
+        }
+    }
+    &__menu{
+        padding-top: 46px;
+        margin-left: 39px;
+        @include media(lg){
+            margin-left: 0;
+            padding-top: 44px;
+        }
+    }
+    &__mbtn{
+        display: flex;
+        justify-content:flex-end;
+        padding-top: 35px;
+        a{
+            font-size: 30px;
+            color: $accent;
+            font-weight: bold;
+        }
+        @include media(sm){
+            padding-top: 10px;
+        }
+    }
+}

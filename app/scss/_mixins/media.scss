@@ -1,0 +1,29 @@
+@mixin mb($width){
+    @media(max-width: $width){
+        @content;
+    }
+}
+
+// Grig
+@mixin media($name){
+    $width: map-get($grid-breakpoints, $name);
+    @include mb($width){
+        @content;
+    }
+}
+
+// Bgi
+@mixin bgi{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// Container
+@mixin max-container($widths: $container-max-widths, $poins: $grid-breakpoints){
+    @each $width, $poin in $widths{
+        @include media-breakpoint-up($width, $poins){
+            max-width: $poin;
+        }
+    }
+} 

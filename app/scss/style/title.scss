@@ -1,0 +1,60 @@
+.title{
+    font-size: 42px;
+    color: $text;
+    letter-spacing:0.8px;
+    line-height: 1.5;
+    @include bold;
+    @include media(md){
+        font-size: 33px;
+    }
+    @include media(xl){
+        font-size: 32px;
+    }
+    @include media(sm){
+        font-size: 27px;
+    }
+    &-large{
+        font-size: 54px;
+        @include media(lg){
+            font-size: 37px;
+        }
+        @include media(sm){
+            font-size: 25px;
+        }
+    }
+    &-smaller{
+        font-size: 25px;
+        @include media(xl){
+            font-size: 25px;
+        }
+        @include media(md){
+            font-size: 25px;
+        }
+        @include media(sm){
+            font-size: 18px;
+        }
+    }
+    &-white{
+        color: #fff;
+        @include media(sm){
+            font-size: 25px;
+        }
+    }
+
+    &-larger{
+        font-size: 32px;
+    }
+    &-small{
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        @include media(xl){
+            font-size: 16px;
+        }
+        @include media(md){
+            font-size: 16px;
+        }
+        @include media(sm){
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.footer{
+    padding-top: 95px;
+    padding-bottom: 85px;
+    @include media(sm){
+        padding-top: 40px;
+    }
+    @include media(md){
+        padding-bottom: 35px;
+    }
+    &__privacy{
+        @include media(md){
+            margin-bottom: 15px;
+        }
+    }
+    &__title{
+        *{
+            line-height: 1.2;
+        }
+        margin-bottom: 12px;
+    }
+    &__desc{
+        ul{
+            li{
+                list-style-type: none;
+                margin-bottom: 12px;
+                a{
+                    font-size: 14px;
+                    text-decoration: none;
+                    letter-spacing: 0.5px;
+                    color: $text;
+                }
+                @include media(sm){
+                    margin-bottom: 7px;
+                }
+            }
+        }
+    }
+    &__logo{
+        margin-bottom: 22px;
+        @include media(md){
+            display: flex;
+        }
+        @include media(sm){
+            margin-bottom: 10px;
+        }
+    }
+    &__link{
+        ul{
+            display: flex;
+            @include media(md){
+                margin-bottom: 30px;
+            }
+            li{
+                list-style-type: none;
+                margin-right: 26px;
+                font-size: 24px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                @include media(lg){
+                    margin-right: 16px;
+                    font-size: 22px;
+                }
+                @include media(sm){
+                    margin-right: 12px;
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__info{
+        margin-bottom: 37px;
+        @include media(sm){
+            margin-bottom: 15px;
+        }
+        @include media(lg){
+            margin-bottom: 8px;
+        }
+        *{
+            font-size: 14px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            color: $text;
+            @include media(sm){
+                font-size: 13px;
+            }
+        }
+    }
+    &__facebook{
+        color: #4267B2;
+    }
+    &__twitter{
+        color: #1da1f2;
+    }
+    &__youtube{
+        color: red;
+    }
+    &__in{
+        color: #006699;
+    }
+    &__social{
+        margin-bottom: 25px;
+    }
+}

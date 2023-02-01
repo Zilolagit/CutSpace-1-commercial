@@ -1,0 +1,231 @@
+extends layout/app
+block var 
+    - let page_title = "Home"; 
+block content
+    section.best 
+        .container 
+            .col-md-6 
+                p Professional Help
+                h2 the Best Arrivals
+            .col-md-6
+
+    section.home
+        .container
+            .row
+                .col-lg-6.home__col.order-2.order-lg-1
+                    .home__title
+                        h1.title.title-large Find your custom matched commercial real estate space.
+                    .home__desc
+                        p.desc In oculis quidem exercitus quid ex ea consequatur? autem vel eum fugiat, quo pertineant ero tibique
+                    form.home__form(action="/") 
+                        .home__text
+                            input(type="text" placeholder="Your email address")
+                        .home__btn 
+                            +link("", "#", "Subscribe")
+                .col-lg-6.home__col.order-1.order-lg-2
+                    .home__img(style="background-image:url(image/home.jpg);")
+    section.sponsors
+        .container
+            .sponsor#sponsor
+                .sponsor__item
+                    a(href="#")
+                        img(src="image/sponsor-1.svg", alt="sponsors")
+                .sponsor__item.sponsor__item-second
+                    a(href="#")
+                        img(src="image/sponsor-2.svg", alt="sponsors")
+                .sponsor__item
+                    a(href="#")
+                        img(src="image/sponsor-3.svg", alt="sponsors")
+                .sponsor__item
+                    a(href="#")
+                        img(src="image/sponsor-4.svg", alt="sponsors")
+    section.space
+        .container-fluid
+                .row 
+                    .col-lg-6
+                        .row
+                            .col-6.space__col.space__col-first
+                                .space__img.space__img-right(style="background-image:url(image/space-1.jpg);")
+                            .col-6.space__col.space__col-second
+                                .space__img(style="background-image:url(image/space-2.jpg); position:relative;")
+                                    .space__square
+                                        .row
+                                            .col-4.d-flex.justify-content-center.align-items-center
+                                                span
+                                                    i.bi.bi-building 
+                                            .col-8
+                                                .space__info
+                                                    h4.title.title-small Twelve West Lake
+                                                .space__num
+                                                    p.desc Space for up to 150 people
+                    .col-lg-4.offset-lg-1
+                        .space__box
+                            .space__title
+                                h3.title We provide best space for you!
+                            .space__desc
+                                p.desc Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex ea quid est et via procedat oratio quaerimus.
+                            .space__text
+                                p.desc quid aut ad id omnia referri oporteat, ipsum autem nusquam hoc epicurus in ea commodi consequatur?
+                            .space__btn 
+                                +link("", "#", "Learn more")
+    section.sail
+        .container.sail__container
+            .sail__box
+                .row
+                    .col-lg-6 
+                        .sail__img
+                            .sail__card(style="background-image:url(image/product.jpg);")
+                    .col-lg-5.offset-lg-1
+                        .sail__part
+                            .sail__text
+                                h3.title.title-white Start using our product
+                            .sail__desc
+                                p.desc.desc-white Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex
+                            .sail__btn 
+                                +btn("", "Contact Us")
+                                +btn("white", "Watch now")
+    section.serve
+        .container
+            .row
+                .col-md-8.offset-md-2
+                    .serve__text
+                        .serve__title
+                            h3.title Who do we serve?
+                        .serve__desc
+                            p.desc Every buyer and seller of tech and services in the world.
+            .row.serve__row
+                .col-md-6.serve__col
+                    .card.card-active
+                        .card__img
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.3452 24.5521L24.3061 27.3064C26.4592 29.9887 29.374 32.2086 32.9493 32.9195V37.0803H37.0509V33.2027C40.956 32.9357 44.9176 29.9901 45.582 26.0753C46.5092 20.7602 41.8484 17.5786 37.0509 16.104V8.04849C39.1232 8.26314 41.4574 9.92359 43.1428 11.3682L45.6873 8.15117C43.3294 5.96217 39.4961 3.9766 37.0508 3.91262V0.00738144H32.9492V4.14326C29.7258 4.83369 27.0752 7.39471 26.6444 10.5361C26.2523 15.0449 28.3589 17.2828 32.9492 18.8773V28.6895C29.3536 27.722 27.3452 24.5521 27.3452 24.5521ZM30.7013 11.1398C30.8798 9.93986 31.7063 8.96014 32.9492 8.43896V14.4279C30.6511 13.6765 30.533 12.2695 30.7013 11.1398ZM37.0508 29.0772C39.6106 28.7075 41.5442 27.0118 41.5442 25.3542C41.5442 22.0086 37.5377 20.6588 37.0876 20.5072C37.0692 20.501 37.0568 20.4968 37.0508 20.4945V29.0772Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M62.9394 56.477V48.9702L63.8468 49.5146L65.9572 45.9975L51.4746 37.3081L36.992 45.9977L39.1024 49.5147L40.0098 48.9703V56.4771H29.9904V48.9703L30.8978 49.5147L33.0081 45.9977L18.5254 37.3081L4.04277 45.9977L6.15316 49.5147L7.06057 48.9703V56.4771H0V60.5787H70V56.4771H62.9394V56.477ZM20.5762 56.477V51.4672H16.4746V56.477H11.1621V46.5093L18.5254 42.0912L25.8887 46.5093V56.477H20.5762ZM53.5254 51.4672V56.477H58.8379V46.5093L51.4746 42.0912L44.1113 46.5093V56.477H49.4238V51.4672H53.5254Z" fill="white"/>
+                                <path d="M0 65.8911H70V69.9926H0V65.8911Z" fill="white"/>
+                            </svg>
+                        .card__title
+                            h2.title Buyers
+                        .card__desc
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad eam.
+                        .card__btn 
+                            +btn("bgWhite", "Get Started")
+                .col-md-6.serve__col
+                    .card.card-hover
+                        .card__img
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M44.1291 9.47871H70V46.5295H44.1293V70H25.8709V46.5295H0V9.47871H25.8709V5.4775L35 0L44.1291 5.4775V9.47871ZM35 4.78311L29.9724 7.79967H29.9723V9.47857H40.0276V7.79967L35 4.78311ZM40.0276 65.8984H29.9723V46.5295H40.0276V65.8984ZM4.10156 42.4279H65.8984V13.5803H4.10156V42.4279Z" fill="#F78434"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.0711 33.2503L25.5652 37.2042L21.7323 35.7444L28.1006 19.0239L31.5056 19.0203L37.82 35.7525L33.9827 37.2006L32.4919 33.2503H27.0711ZM28.6334 29.1487H30.9441L29.7942 26.1013L28.6334 29.1487Z" fill="#F78434"/>
+                                <path d="M48.2624 32.5098H43.473V18.8439H39.3715V36.6114H48.2624V32.5098Z" fill="#F78434"/>
+                                <path d="M60.4445 32.5098H54.7341V29.8352H60.0234V25.7336H54.7341V23.0588H60.4445V18.9573H50.6326V36.6114H60.4445V32.5098Z" fill="#F78434"/>
+                                <path d="M14.4225 23.0677C15.9685 22.382 18.2923 24.0498 19.5359 25.1699L22.0805 21.9531C18.3441 18.535 15.2095 18.5088 13.2177 19.1469C11.2329 19.7463 9.8246 21.3158 9.53571 23.2572C9.25831 25.121 10.0587 26.9132 11.6248 27.9341C11.8963 28.1112 13.7677 28.911 16.014 29.7537C16.8487 30.0614 17.7008 30.6126 17.5895 31.2357C17.4978 31.7495 16.7818 32.5097 15.536 32.5097C13.5222 32.6266 12.0289 30.9844 10.9122 29.6362L7.87308 32.3906C9.74968 34.7915 12.2987 36.6792 15.5362 36.6112C18.584 36.6112 21.1457 34.6537 21.6274 31.9566C21.9922 29.9138 21.082 27.2512 17.4334 25.9055C15.813 25.3077 14.3002 24.658 13.7752 24.4289C13.4051 23.9654 13.5457 23.4259 14.4225 23.0677V23.0677Z" fill="#F78434"/>
+                            </svg>
+                        .card__title
+                            h2.title Seller
+                        .card__desc
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad eam.
+                        .card__btn 
+                            +btn("bgWhite", "Get Started")
+    section.choose
+        .container
+            .choose__text
+                    h2.title Why choose us?
+            .row
+                .col-lg-3.col-6
+                    .choose__card 
+                        .choose__img 
+                            <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7173 27.7317V6.82935L36.6967 3.87194V7.66095H38.9819V0H31.2636V2.26819H35.0809L31.1246 6.19509L25.7973 0.907425L13.0017 13.6081L7.83141 8.47628L0.545118 15.7085L2.16095 17.3123L5.47511 14.0228V27.7318H0.0961609V30H39.0962V27.7318H33.7173V27.7317ZM27.6235 5.92775V27.7317H22.643V7.24602L25.7973 4.11517L27.6235 5.92775ZM13.0016 16.8159L11.5688 15.3936V27.7317H16.5493V13.2945L13.0016 16.8159Z" fill="#58BEBF"/>
+                            </svg>
+                        .choose__title
+                            h3.title.title-smaller Authenticity
+                        .choose__desc 
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad.
+                .col-lg-3.col-6
+                    .choose__card 
+                        .choose__img 
+                            <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.75 0H22.5V7.5H15.75V0Z" fill="#58BEBF"/>
+                            <path d="M0 0H6.75V7.5H0V0Z" fill="#58BEBF"/>
+                            <ellipse cx="11.625" cy="21" rx="4.125" ry="3.75" fill="#58BEBF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 21.375C2.25 16.6116 6.27941 12.75 11.25 12.75C16.2206 12.75 20.25 16.6116 20.25 21.375C20.25 26.1384 16.2206 30 11.25 30C6.27941 30 2.25 26.1384 2.25 21.375ZM5.39313 21.375C5.39313 24.4699 8.02055 26.9878 11.25 26.9878C14.4795 26.9878 17.1069 24.4699 17.1069 21.375C17.1069 18.2801 14.4795 15.7622 11.25 15.7622C8.02055 15.7622 5.39313 18.28 5.39313 21.375Z" fill="#58BEBF"/>
+                            <path d="M7.34766 11.3905C8.12223 11.0495 8.92592 10.8114 9.75 10.6768L8.13937 9H1.5L5.10209 12.75C5.791 12.2009 6.54211 11.7453 7.34766 11.3905V11.3905Z" fill="#58BEBF"/>
+                            <path d="M12.75 10.6768C13.5741 10.8113 14.3778 11.0494 15.1523 11.3905C15.9579 11.7452 16.709 12.2008 17.3979 12.75L21 9H14.3606C13.9268 9.45163 13.3201 10.0832 12.75 10.6768V10.6768Z" fill="#58BEBF"/>
+                            </svg>
+                        .choose__title
+                            h3.title.title-smaller Entraunership
+                        .choose__desc 
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad.
+                .col-lg-3.col-6
+                    .choose__card 
+                        .choose__img 
+                            <svg width="22" height="30" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.42514 20.1037C5.42514 17.0535 7.9067 14.5718 10.957 14.5718C14.0074 14.5718 16.4889 17.0535 16.4889 20.1037C16.4889 23.1539 14.0073 25.6356 10.957 25.6356C7.90676 25.6356 5.42514 23.154 5.42514 20.1037ZM7.12248 20.7647L9.85963 23.5019L14.7915 18.57L13.5486 17.327L9.85963 21.016L8.36543 19.5218L7.12248 20.7647Z" fill="#58BEBF"/>
+                            <path d="M16.5768 3.42322H14.3803C14.3803 1.53264 12.8476 0 10.957 0C9.06645 0 7.53381 1.53264 7.53381 3.42322H5.33725V7.81148H16.5768V3.42322H16.5768Z" fill="#58BEBF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3346 9.56929V3.42322H21.8736V30H0.0404358V3.42322H3.57944V9.56929H18.3346ZM3.66733 20.1037C3.66733 24.1233 6.93745 27.3935 10.957 27.3935C14.9766 27.3935 18.2467 24.1233 18.2467 20.1037C18.2467 16.0843 14.9766 12.8141 10.957 12.8141C6.93751 12.8141 3.66733 16.0842 3.66733 20.1037Z" fill="#58BEBF"/>
+                            </svg>
+                        .choose__title
+                            h3.title.title-smaller Authenticity
+                        .choose__desc 
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad.
+                .col-lg-3.col-6
+                    .choose__card 
+                        .choose__img 
+                            <svg width="37" height="30" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.2621 10.8582H26.8782C24.6847 10.8582 22.9066 12.6364 22.9066 14.8299V26.023C22.9066 28.2165 24.6847 29.9946 26.8782 29.9946H35.1644L36.5631 13.3609C36.6764 12.014 35.6137 10.8582 34.2621 10.8582Z" fill="#58BEBF"/>
+                            <path d="M18.935 0.00543213H17.0918L16.3796 8.83272C16.1773 11.3401 14.0833 13.2719 11.5677 13.2719H10.1838V27.5809H14.8753C14.8753 27.6151 14.8753 27.6491 14.8752 27.683C14.8738 28.9594 15.908 29.9946 17.1844 29.9946H22.2349C21.3189 28.9252 20.7637 27.5381 20.7637 26.0229V14.8298C20.7637 12.9734 21.5963 11.3088 22.9066 10.1865V3.977C22.9066 1.78358 21.1284 0.00543213 18.935 0.00543213V0.00543213Z" fill="#58BEBF"/>
+                            <path d="M0 11.8373H8.04093V29.0154H0V11.8373Z" fill="#58BEBF"/>
+                            </svg>
+                        .choose__title
+                            h3.title.title-smaller Kindness
+                        .choose__desc 
+                            p.desc Torquem detraxit hosti et quidem se texit, ne ad.
+    section.thanks
+        .container
+            .row.thanks__row
+                .col-sm-7
+                    .thanks__text
+                        h3.title Thanks for your nice words to us
+                .col-sm-5.d-flex.justify-content-center.align-items-center
+                    .thanks__desc
+                        p.desc.desc-grey Si sine causa, nollem me tamen laudandis maioribus meis corrupisti nec voluptas
+            .experts#experts
+                .experts__item
+                    .experts__img(style="background-image:url(image/experts-1.jpg);")
+                    .experts__box
+                        .experts__desc
+                            p.desc "Omne animal, simul atque integre iudicante itaque earum motus et."
+                        .experts__text
+                            h3.title.title-small Arend Pellewever
+                        .experts__author
+                            p Cleveland
+                .experts__item
+                    .experts__img(style="background-image:url(image/experts-2.jpg);")
+                    .experts__box
+                        .experts__desc
+                            p.desc "In quo quaerimus, non emolumento aliquo, sed quia voluptas sit."
+                        .experts__text
+                            h3.title.title-small Arend Pellewever
+                        .experts__author
+                            p Cleveland
+                .experts__item
+                    .experts__img(style="background-image:url(image/experts-3.jpg);")
+                    .experts__box
+                        .experts__desc
+                            p.desc "Filium morte multavit si sine causa? quae fuerit causa, nollem."
+                        .experts__text
+                            h3.title.title-small Arend Pellewever
+                        .experts__author
+                            p Cleveland
+    section.get
+        .container.get__container
+            .row
+                .col-xl-4.col-md-5.order-2.order-md-1
+                    .get__box
+                        .get__title
+                            h3.title.title-white Get experience from the expert
+                        .get__desc
+                            p.desc.desc-white Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex
+                        .get__btn 
+                            +btn("white", "Contact Us")
+                .col-md-6.offset-md-1.offset-xl-2.order-1.order-md-2.d-flex.align-items-end.justify-content-center
+                    .get__img 
+                        img(src="image/avatar.svg", alt="avatar")

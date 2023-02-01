@@ -1,0 +1,111 @@
+.space{
+    overflow: hidden;
+    padding-bottom: 380px;
+    @include media(lg){
+        padding-bottom: 80px;
+    }
+    &__row{
+        @include media(lg){
+            margin-left: -10px;
+        }
+    }
+    &__img{
+        padding-top: 155%;
+        @include bgi;
+        border-radius: 20px 20px 0px 20px;
+        &-right{
+            border-radius: 20px;
+        }
+        @include media(lg){
+            border-radius: 5px;
+        }
+    }
+    &__col{
+        &-first{
+            margin-left: -80px;
+            @include media(lg){
+                margin-left: 0;
+            }
+        }
+    }
+    &__square{
+        position: absolute;
+        bottom: 17%;
+        right: -12%;
+        max-width: 300px;
+        border-radius: 15px;
+        background-color: #fff;
+        padding: 38px 0px;
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            text-decoration: none;
+            border-radius: 50%;
+            background: rgba(88, 190, 191, 0.2);
+            i{
+                color: $color;
+            }
+        }
+        @include media(lg){
+            right: 50%;
+            margin-right: -148px;
+        
+        }
+        @include media(md){
+            display: none;
+        }
+        @include media(xl){
+            bottom: 17%;
+            right: -31%;
+            border-radius: 15px;
+            padding: 27px 0px;
+        }
+    }
+    &__box{
+        padding-top: 65px;
+        padding-left: 40px;
+        @include media(xl){
+            padding: 0;
+        }
+        @include media(lg){
+            text-align: center;
+            padding: 0 75px;
+            padding-top: 28px;
+        }
+        @include media(md){
+            padding: 0 25px;
+            padding-top: 20px;
+        }
+        @include media(sm){
+            padding: 0;
+            padding-top: 20px;
+        }
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__desc{
+        max-width: 380px;
+        margin-bottom: 24px;
+        @include media(lg){
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+    &__text{
+        max-width: 357px;
+        margin-bottom: 44px;
+        @include media(lg){
+            max-width: 100%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        @include media(xl){
+            margin-bottom: 25px;
+        }
+    }
+}
